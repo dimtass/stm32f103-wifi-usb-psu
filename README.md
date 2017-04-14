@@ -9,6 +9,10 @@ This project is about a remote controlled PSU using various interfaces like netw
 
 You need to unsolder and replace the 10K pot and use a digital pot in its place. For that purpose I've used the MCP41010 digital pot from microchip. The original pot is logarithmic but the digital pot is linear; therefore the PSU has better resolution in lower voltages especially under 6V and worst for over 6V. Finally, an opto-isolated relay is used in the output to control the ON/OFF of the PSU.
 
+This is a post about this stupid project.
+
+http://www.stupid-projects.com/wifi-digital-control-dc-power-supply-with-web-interface-and-usb/
+
 ### How to compile and flash
 You need cmake to build this project either on Windows or Linux. To setup the cmake properly follow the instructions from [here](https://github.com/dimtass/cmake_toolchains/blob/master/README.md). Then edit the cmake/TOOLCHAIN_arm_none_eabi_cortex_m3.cmake file and point TOOLCHAIN_DIR to the correct GCC path.
 > e.g. on Windows
