@@ -5,12 +5,12 @@ Power supply with WiFi, USB and UART interface using STM32F103, ESP8266 and MCP4
 
 This project is about a remote controlled PSU using various interfaces like network (WiFi) and USB. An ESP8266 (ESP-05) module is used to provide a web interface and a simple TCP protocol to control the PSU. Also the STM32's USB interface provides control through a CDC interface. I've used a generic LM2596 PSU like the following which is very cheap to buy in ebay. This PSU has a variable 10K pot that sets the output voltage.
 
-[psu image]
+![LM2596 module](http://www.stupid-projects.com/wp-content/uploads/2017/04/LM2596-300x300.jpg)
 
 You need to unsolder and replace the 10K pot and use a digital pot in its place. For that purpose I've used the MCP41010 digital pot from microchip. The original pot is logarithmic but the digital pot is linear; therefore the PSU has better resolution in lower voltages especially under 6V and worst for over 6V. Finally, an opto-isolated relay is used in the output to control the ON/OFF of the PSU.
 
 ### How to compile and flash
-You need cmake to build this project either on Windows or Linux. To setup the cmake properly follow the instructions from (here)[https://github.com/dimtass/cmake_toolchains/blob/master/README.md]. Then edit the cmake/TOOLCHAIN_arm_none_eabi_cortex_m3.cmake file and point TOOLCHAIN_DIR to the correct GCC path.
+You need cmake to build this project either on Windows or Linux. To setup the cmake properly follow the instructions from [here](https://github.com/dimtass/cmake_toolchains/blob/master/README.md). Then edit the cmake/TOOLCHAIN_arm_none_eabi_cortex_m3.cmake file and point TOOLCHAIN_DIR to the correct GCC path.
 > e.g. on Windows
 > set(TOOLCHAIN_DIR C:/opt/gcc-arm-none-eabi-4_9-2015q3-20150921-win32)
 > or on Linux
