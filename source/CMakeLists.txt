@@ -17,6 +17,11 @@ if (CMAKE_SYSTEM_PROCESSOR STREQUAL "arm-none-eabi")
     add_subdirectory(StdPeriph_Driver)
     add_subdirectory(STM32_USB-FS-Device_Driver)
     add_subdirectory(startup)
+
+	# Resolve the issue with Eclipse's indexer and C/C++ mixed source files
+	include(../cmake/language_provider.cmake)
+	remove_from_SYSTEM_MACROS(CXX "__cplusplus;.*;")
+	create_language_provider("${CMAKE_BINARY_DIR}/.settings" "${GCC_PREFIX}-" "${CXX_STANDARD_FLAG}")
     
     # enable asm for stm startup.s file
     enable_language(ASM)
