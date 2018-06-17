@@ -28,7 +28,6 @@
 /**
  * System options
  */
-#define HD271C
 #define TMR_1MSEC
 #define TMR_100MSEC
 #define TMR_250MSEC

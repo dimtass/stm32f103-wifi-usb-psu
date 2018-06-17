@@ -52,6 +52,7 @@ echo "parallel          : ${PARALLEL}"
 echo "cmake flags       : ${CMAKE_FLAGS}"
 echo "cmake scripts     : ${SCRIPTS_CMAKE}"
 echo "IDE generator     : ${IDE_GENERATOR}"
+echo "Threads           : ${PARALLEL}"
 
 cd source
 
